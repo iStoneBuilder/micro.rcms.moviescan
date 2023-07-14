@@ -77,17 +77,6 @@ public class SettingService extends CommonService implements ISettingService {
         return new JSONObject();
     }
 
-    @Override
-    public JSONObject getApi() throws Exception {
-        // 获取所有 JAX-RS server 的服务路径
-        return new JSONObject();
-    }
-
-    @Override
-    public JSONObject getTest() throws Exception {
-        return null;
-    }
-
     private void refreshMetaData() throws Exception {
         FileInfoVO fileInfoVO = new FileInfoVO();
         fileInfoVO.setRefreshId(refreshId);

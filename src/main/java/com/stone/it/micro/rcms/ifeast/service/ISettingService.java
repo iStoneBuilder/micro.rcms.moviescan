@@ -16,27 +16,22 @@ import javax.ws.rs.QueryParam;
  * @Desc
  */
 
-@Path("/settingService")
+@Path("/setting")
 @Produces("application/json")
 @Consumes("application/json")
 public interface ISettingService {
 
     @GET
-    @Path("/find/list")
+    @Path("/records/list")
     List<SettingVO> getSettingList(@QueryParam("")SettingVO setting) throws Exception;
 
     @GET
-    @Path("/find/detail/{settingId}")
+    @Path("/records/{settingId}")
     SettingVO getSettingById(@PathParam("")SettingVO settingVO) throws Exception;
 
     @GET
     @Path("/refresh")
     JSONObject refreshResource() throws Exception;
 
-    @GET
-    @Path("/getapi")
-    JSONObject getApi() throws Exception;
-
-    JSONObject getTest() throws Exception;
 
 }
