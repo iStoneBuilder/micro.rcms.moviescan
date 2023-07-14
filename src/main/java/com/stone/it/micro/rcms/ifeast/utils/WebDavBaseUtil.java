@@ -4,6 +4,7 @@ import com.github.sardine.DavResource;
 import com.github.sardine.Sardine;
 import com.github.sardine.impl.SardineImpl;
 
+import com.stone.it.micro.rcms.ifeast.service.TmdbConstant;
 import com.stone.it.micro.rcms.ifeast.vo.FileInfoVO;
 import com.stone.it.micro.rcms.ifeast.vo.SettingVO;
 import java.util.ArrayList;

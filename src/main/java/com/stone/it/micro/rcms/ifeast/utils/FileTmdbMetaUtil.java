@@ -2,9 +2,10 @@ package com.stone.it.micro.rcms.ifeast.utils;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.stone.it.micro.rcms.http.RequestUtil;
+import com.stone.it.micro.rcms.http.ResponseEntity;
 import com.stone.it.micro.rcms.ifeast.vo.FileInfoVO;
 import com.stone.it.micro.rcms.ifeast.vo.ResourceVO;
-import com.stone.it.micro.rcms.ifeast.vo.ResponseVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,9 +35,10 @@ public class FileTmdbMetaUtil {
     }
 
     private static JSONArray getNetData(String searchUri, Map<String, String> params) throws Exception {
-        ResponseVO response = HttpRequestUtil.doGet(searchUri, params, null);
-        if ("200".equals(response.getStatusCode())) {
-            JSONObject jsonObject = JSONObject.parseObject(response.getResponseBody());
+        // ResponseVO response = HttpRequestUtil.doGet(searchUri, params, null);
+        ResponseEntity response = RequestUtil.doGet(searchUri, params);
+        if ("200".equals(response.getCode())) {
+            JSONObject jsonObject = JSONObject.parseObject(response.getBody());
             total = jsonObject.getInteger("total_pages");
             return jsonObject.getJSONArray("results");
         }
