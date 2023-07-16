@@ -16,7 +16,6 @@
     </jaxrs:providers>
     <jaxrs:serviceBeans>
       <ref bean="settingService"/>
-      <ref bean="settingService"/>
     </jaxrs:serviceBeans>
   </jaxrs:server>
 

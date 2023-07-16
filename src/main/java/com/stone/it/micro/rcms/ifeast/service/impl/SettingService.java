@@ -44,18 +44,18 @@ public class SettingService extends CommonService implements ISettingService {
 
     @Override
     public SettingVO getSettingById(SettingVO settingVO) throws Exception {
-        return null;
+        return settingDao.getSettingById(settingVO);
     }
 
     @Override
     public JSONObject refreshResource() throws Exception {
         if (refreshId != null) {
-            LOGGER.info("data refreshing , please wait .......");
+            LOGGER.info("REFRESH_RESOURCE data refreshing , please wait .......");
             return new JSONObject();
         }
         // 查询配置信息
         List<SettingVO> list = settingDao.getSettingList(new SettingVO());
-        LOGGER.info("get setting data " + JSON.toJSONString(list));
+        LOGGER.info("REFRESH_RESOURCE get setting data " + JSON.toJSONString(list));
         refreshId = CommonBaseUtil.getUuid();
         FileInfoVO fileInfoVO = new FileInfoVO();
         fileInfoVO.setRefreshId(refreshId);
