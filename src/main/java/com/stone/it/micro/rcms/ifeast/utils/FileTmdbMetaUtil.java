@@ -26,7 +26,7 @@ public class FileTmdbMetaUtil {
         total = 1;
         JSONArray data = getNetData(searchUri, params);
         if (data.size() == 1) {
-            return handleTmdbResource(data.getJSONObject(0));
+            return handleTmdbResource(data.getJSONObject(0),fileInfoVO);
         }
         if (data.size() > 1) {
             return matchTmdbResource(params, searchUri, fileInfoVO, data);
@@ -35,7 +35,6 @@ public class FileTmdbMetaUtil {
     }
 
     private static JSONArray getNetData(String searchUri, Map<String, String> params) throws Exception {
-        // ResponseVO response = HttpRequestUtil.doGet(searchUri, params, null);
         ResponseEntity response = RequestUtil.doGet(searchUri, params);
         if ("200".equals(response.getCode())) {
             JSONObject jsonObject = JSONObject.parseObject(response.getBody());
@@ -49,14 +48,14 @@ public class FileTmdbMetaUtil {
                                                 JSONArray datas) throws Exception {
         JSONObject matchData = getMatchResource(datas, fileInfoVO);
         if (matchData != null) {
-            return handleTmdbResource(matchData);
+            return handleTmdbResource(matchData,fileInfoVO);
         }
         for (int i = 1; i < total; i++) {
             params.put("page", String.valueOf(i + 1));
             JSONArray data = getNetData(searchUri, params);
             matchData = getMatchResource(datas, fileInfoVO);
             if (matchData != null) {
-                return handleTmdbResource(matchData);
+                return handleTmdbResource(matchData,fileInfoVO);
             }
         }
         return null;
@@ -66,7 +65,26 @@ public class FileTmdbMetaUtil {
         return null;
     }
 
-    private static ResourceVO handleTmdbResource(JSONObject jsonObject) {
-        return null;
+    /**
+     *  解析匹配的数据
+     * @param jsonObject
+     * @return
+     */
+    private static ResourceVO handleTmdbResource(JSONObject jsonObject,FileInfoVO fileInfoVO) {
+        ResourceVO resourceVO = new ResourceVO();
+        resourceVO.setTmdbId(jsonObject.getString("id"));
+        resourceVO.setTitle(getValueByKey(jsonObject,"name","title"));
+        resourceVO.setLanguage(jsonObject.getString("original_language"));
+        resourceVO.setMediaType(fileInfoVO.getFileType());
+        resourceVO.setAdult(jsonObject.getString("adult"));
+        resourceVO.setReleaseDate(getValueByKey(jsonObject,"first_air_date","release_date"));
+        resourceVO.setRegions(jsonObject.getString("origin_country"));
+        resourceVO.setGenres(jsonObject.getString("genre_ids"));
+        resourceVO.setResourceData(jsonObject.toString());
+        return resourceVO;
+    }
+
+    private static String getValueByKey(JSONObject data,String key1,String key2){
+        return data.containsKey(key1) ? data.getString(key1) :data.getString(key2);
     }
 }

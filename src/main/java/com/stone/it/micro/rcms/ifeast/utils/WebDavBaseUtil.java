@@ -4,6 +4,7 @@ import com.github.sardine.DavResource;
 import com.github.sardine.Sardine;
 import com.github.sardine.impl.SardineImpl;
 
+import com.stone.it.micro.rcms.common.utils.UUIDUtil;
 import com.stone.it.micro.rcms.ifeast.service.TmdbConstant;
 import com.stone.it.micro.rcms.ifeast.vo.FileInfoVO;
 import com.stone.it.micro.rcms.ifeast.vo.SettingVO;
@@ -60,7 +61,7 @@ public class WebDavBaseUtil {
             iFile.setFileType(isMovie ? "movie" : "tv");
             iFile.setSettingId(settingVO.getSettingId());
             // 文件ID
-            iFile.setFileId(CommonBaseUtil.getUuid());
+            iFile.setFileId(UUIDUtil.getUuid());
             // 文件路径
             iFile.setFilePath(uri + dr.getDisplayName());
             handleFileName(iFile, dr.getDisplayName(), isMovie);

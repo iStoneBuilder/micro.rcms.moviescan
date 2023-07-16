@@ -1,7 +1,7 @@
 package com.stone.it.micro.rcms.ifeast.service.impl;
 
 
-import com.stone.it.micro.rcms.ifeast.utils.CommonBaseUtil;
+import com.stone.it.micro.rcms.common.utils.MapUtil;
 import com.stone.it.micro.rcms.ifeast.vo.SearchVO;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +25,7 @@ public class CommonService {
 
     public Map<String, String> handleQuery(Object query) throws Exception {
         Map<String, String> params = new HashMap<>();
-        params = CommonBaseUtil.convertToMap(query);
+        params = MapUtil.convertToMap(query);
         // 设置api_key
         params.put("api_key", apiKey);
         // 判断语言是否传语言，否设置默认值

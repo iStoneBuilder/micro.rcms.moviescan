@@ -87,8 +87,10 @@
 
   <update id="updateFileInfo">
     update tpl_mv_resource_t
-    set refresh_id = #{refreshId},
-    tmdb_id = #{tmdbId}
+    set refresh_id = #{refreshId}
+    <if test="tmdbId != null and tmdbId != ''">
+      ,tmdb_id = #{tmdbId}
+    </if>
     where resource_id = #{fileId}
   </update>
 
