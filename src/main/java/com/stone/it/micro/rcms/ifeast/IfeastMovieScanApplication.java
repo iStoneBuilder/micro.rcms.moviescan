@@ -14,12 +14,12 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.stone.it"})
-public class IfeastApplication {
+public class IfeastMovieScanApplication {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(IfeastApplication.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(IfeastMovieScanApplication.class);
     public static void main(String[] args) {
         LOGGER.info("Ifeast Application Start now ........");
-        SpringApplication.run(IfeastApplication.class, args);
+        SpringApplication.run(IfeastMovieScanApplication.class, args);
         LOGGER.info("Ifeast Application Running ........");
     }
 
