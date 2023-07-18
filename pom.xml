@@ -10,13 +10,8 @@
       <version>1.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <artifactId>micro.rcms.framehttp</artifactId>
+      <artifactId>micro.rcms.framehttps</artifactId>
       <groupId>com.stone.it</groupId>
-      <version>1.0.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>com.stone.it</groupId>
-      <artifactId>micro.rcms.framehttp</artifactId>
       <version>1.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
