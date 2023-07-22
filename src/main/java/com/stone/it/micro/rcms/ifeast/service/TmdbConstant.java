@@ -7,24 +7,24 @@ package com.stone.it.micro.rcms.ifeast.service;
  */
 public interface TmdbConstant {
 
-    public static final String HTTP = "http://";
+    String HTTP = "http://";
 
-    public static final String HTTPS = "https://";
+    String HTTPS = "https://";
 
-    public static final String MEDIA_TYPE = ".mp4|.rmvb|.mkv";
+    String MEDIA_TYPE = ".mp4|.rmvb|.mkv";
 
-    public static final String MP4 = ".mp4";
+    String MP4 = ".mp4";
 
-    public static final String RMVB = ".rmvb";
+    String RMVB = ".rmvb";
 
-    public static final String MKV = ".mkv";
+    String MKV = ".mkv";
 
-    public static final String TV_POINT = "/iTv/.";
+    String TV_POINT = "/iTv/.";
 
-    public static final String MOVIE_POINT = "/iMovie/.";
+    String MOVIE_POINT = "/iMovie/.";
 
-    public static final String TYPE_MOVIE = "movie";
+    String TYPE_MOVIE = "movie";
 
-    public static final String TYPE_TV = "tv";
+    String TYPE_TV = "tv";
 
 }
