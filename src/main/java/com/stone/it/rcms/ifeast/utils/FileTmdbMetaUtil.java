@@ -1,11 +1,11 @@
-package com.stone.it.micro.rcms.ifeast.utils;
+package com.stone.it.rcms.ifeast.utils;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.stone.it.micro.rcms.http.RequestUtil;
-import com.stone.it.micro.rcms.http.ResponseEntity;
-import com.stone.it.micro.rcms.ifeast.vo.FileInfoVO;
-import com.stone.it.micro.rcms.ifeast.vo.ResourceVO;
+import com.stone.it.rcms.http.RequestUtil;
+import com.stone.it.rcms.http.ResponseEntity;
+import com.stone.it.rcms.ifeast.vo.FileInfoVO;
+import com.stone.it.rcms.ifeast.vo.ResourceVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

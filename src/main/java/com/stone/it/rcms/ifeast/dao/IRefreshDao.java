@@ -1,8 +1,8 @@
-package com.stone.it.micro.rcms.ifeast.dao;
+package com.stone.it.rcms.ifeast.dao;
 
 
-import com.stone.it.micro.rcms.ifeast.vo.FileInfoVO;
-import com.stone.it.micro.rcms.ifeast.vo.ResourceVO;
+import com.stone.it.rcms.ifeast.vo.FileInfoVO;
+import com.stone.it.rcms.ifeast.vo.ResourceVO;
 import java.util.List;
 
 /**

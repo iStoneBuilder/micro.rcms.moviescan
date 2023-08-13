@@ -1,13 +1,13 @@
-package com.stone.it.micro.rcms.ifeast.utils;
+package com.stone.it.rcms.ifeast.utils;
 
 import com.github.sardine.DavResource;
 import com.github.sardine.Sardine;
 import com.github.sardine.impl.SardineImpl;
 
-import com.stone.it.micro.rcms.common.utils.UUIDUtil;
-import com.stone.it.micro.rcms.ifeast.service.TmdbConstant;
-import com.stone.it.micro.rcms.ifeast.vo.FileInfoVO;
-import com.stone.it.micro.rcms.ifeast.vo.SettingVO;
+import com.stone.it.rcms.com.util.UUIDUtil;
+import com.stone.it.rcms.ifeast.service.TmdbConstant;
+import com.stone.it.rcms.ifeast.vo.FileInfoVO;
+import com.stone.it.rcms.ifeast.vo.SettingVO;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;

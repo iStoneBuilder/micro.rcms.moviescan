@@ -1,4 +1,4 @@
-package com.stone.it.micro.rcms.ifeast.vo;
+package com.stone.it.rcms.ifeast.vo;
 
 import lombok.Data;
 

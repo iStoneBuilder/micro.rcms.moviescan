@@ -1,7 +1,7 @@
-package com.stone.it.micro.rcms.ifeast.dao;
+package com.stone.it.rcms.ifeast.dao;
 
 
-import com.stone.it.micro.rcms.ifeast.vo.SettingVO;
+import com.stone.it.rcms.ifeast.vo.SettingVO;
 import java.util.List;
 
 /**

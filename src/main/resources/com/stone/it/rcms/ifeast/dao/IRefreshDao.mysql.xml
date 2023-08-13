@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.stone.it.micro.rcms.ifeast.dao.IRefreshDao">
+<mapper namespace="com.stone.it.rcms.ifeast.dao.IRefreshDao">
 
   <delete id="deleteFileInfo">
     delete from tpl_mv_resource_t
@@ -59,7 +59,7 @@
     #{settingId})
   </insert>
 
-  <select id="findFileExist" resultType="com.stone.it.micro.rcms.ifeast.vo.FileInfoVO">
+  <select id="findFileExist" resultType="com.stone.it.rcms.ifeast.vo.FileInfoVO">
     select
     resource_name as fileName,
     resource_id as fileId,
@@ -70,7 +70,7 @@
     and media_type = #{fileType}
   </select>
 
-  <select id="findNotMatchData" resultType="com.stone.it.micro.rcms.ifeast.vo.FileInfoVO">
+  <select id="findNotMatchData" resultType="com.stone.it.rcms.ifeast.vo.FileInfoVO">
     select
     resource_name as fileName,
     resource_id as fileId,

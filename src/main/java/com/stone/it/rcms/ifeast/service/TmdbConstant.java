@@ -1,4 +1,4 @@
-package com.stone.it.micro.rcms.ifeast.service;
+package com.stone.it.rcms.ifeast.service;
 
 /**
  * @author cj.stone

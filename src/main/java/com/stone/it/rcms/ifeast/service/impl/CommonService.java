@@ -1,8 +1,8 @@
-package com.stone.it.micro.rcms.ifeast.service.impl;
+package com.stone.it.rcms.ifeast.service.impl;
 
 
-import com.stone.it.micro.rcms.common.utils.MapUtil;
-import com.stone.it.micro.rcms.ifeast.vo.SearchVO;
+import com.stone.it.rcms.com.util.MapUtil;
+import com.stone.it.rcms.ifeast.vo.SearchVO;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Value;

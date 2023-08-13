@@ -5,12 +5,12 @@
   <artifactId>micro.rcms.moviescan</artifactId>
   <dependencies>
     <dependency>
-      <artifactId>micro.rcms.framebase</artifactId>
+      <artifactId>rcms-base</artifactId>
       <groupId>com.stone.it</groupId>
       <version>1.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <artifactId>micro.rcms.framehttps</artifactId>
+      <artifactId>rcms-https</artifactId>
       <groupId>com.stone.it</groupId>
       <version>1.0.0-SNAPSHOT</version>
     </dependency>

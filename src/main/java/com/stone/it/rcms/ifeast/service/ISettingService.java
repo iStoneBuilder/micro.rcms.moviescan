@@ -1,7 +1,7 @@
-package com.stone.it.micro.rcms.ifeast.service;
+package com.stone.it.rcms.ifeast.service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.stone.it.micro.rcms.ifeast.vo.SettingVO;
+import com.stone.it.rcms.ifeast.vo.SettingVO;
 import java.util.List;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;

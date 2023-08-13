@@ -1,4 +1,4 @@
-package com.stone.it.micro.rcms.ifeast;
+package com.stone.it.rcms.ifeast;
 
 
 import org.slf4j.Logger;
